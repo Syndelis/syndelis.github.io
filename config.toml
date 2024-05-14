@@ -42,7 +42,8 @@ socials = [
 
 stylesheets = [
   "main.css",
-  "cv.css"
+  "printable.css",
+  "cv.css",
 ]
 
 mathjax = false
