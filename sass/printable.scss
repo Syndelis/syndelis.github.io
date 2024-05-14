@@ -1,4 +1,17 @@
 @media print {
+  @page {
+    size: auto;
+    margin: 0;
+  }
+
+  @page :footer {
+    display: none;
+  }
+
+  @page :header {
+    display: none;
+  }
+
   // Use light mode. This could be done better with media queries, but I don't
   // want to fork the theme just yet
   :root.dark {
