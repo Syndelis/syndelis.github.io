@@ -39,3 +39,26 @@
   border-width: 0.2rem;
   border-color: var( --primary-color );
 }
+
+.job-entry-title-rule {
+  display: flex;
+  align-items: center;
+
+  .job-entry-rule {
+    flex-grow: 1;
+    margin-bottom: 0;
+    margin-left: 25px;
+  }
+}
+
+.job-entry-date-role {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  font-size: 12pt;
+  color: var( --text-1 );
+
+  .job-entry-role {
+    flex-grow: 1;
+  }
+}
