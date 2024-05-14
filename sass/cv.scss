@@ -1,0 +1,41 @@
+@media print {
+  :root.dark {
+    .social>img {
+      filter: none;
+    }
+  }
+
+  .page-header {
+    margin: 0;
+  }
+
+  nav {
+    display: none;
+  }
+}
+
+.name-sub-picture {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.name-sub {
+  flex-grow: 1;
+}
+
+.sub {
+  font-size: 0.4em;
+  line-height: 150%;
+  color: var( --text-1 );
+}
+
+.profile-picture {
+  max-width: 6rem;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 50%;
+  border-width: 0.2rem;
+  border-color: var( --primary-color );
+}

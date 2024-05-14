@@ -1,0 +1,86 @@
+{% macro page_header(title, sub, profile_picture) %}
+    <div class="page-header name-sub-picture">
+        <span class="name-sub">
+            {{ title }}<span class="primary-color" style="font-size: 1.6em">.</span>
+            <div class="sub">{{ sub }}</div>
+        </span>
+        <img class="profile-picture" src={{ profile_picture }} />
+    </div>
+{% endmacro content %}
+
+{% macro content(page) %}
+<main>
+    <article>
+        <div class="title">
+            {{ about::page_header(title=page.title, sub=page.extra.sub, profile_picture=page.extra.profile_picture) }}
+
+                <div class="meta">
+                    {% if page.date %}
+                        Posted on <time>{{ page.date | date(format="%Y-%m-%d") }}</time>
+                    {% endif %}
+
+                    {% if page.draft %}
+                        <span class="draft-label">DRAFT</span>
+                    {% endif %}
+                </div>
+        </div>
+
+        {% if page.extra.tldr %}
+            <div class="tldr">
+                <strong>tl;dr:</strong>
+                {{ page.extra.tldr }}
+            </div>
+        {% endif %}
+
+        {# Optional table of contents #}
+        {% if config.extra.toc | default(value=false) %}
+            {% if page.toc %}
+                <h1>Table of Contents</h1>
+                <ul>
+                {% for h1 in page.toc %}
+                    <li>
+                        <a href="{{ h1.permalink | safe }}">{{ h1.title }}</a>
+                        {% if h1.children %}
+                            <ul>
+                                {% for h2 in h1.children %}
+                                    <li>
+                                        <a href="{{ h2.permalink | safe }}">{{ h2.title }}</a>
+                                    </li>
+
+                                    {% if h2.children %}
+                                    <ul>
+                                        {% for h3 in h2.children %}
+                                            <li>
+                                                <a href="{{ h3.permalink | safe }}">{{ h3.title }}</a>
+                                            </li>
+                                        {% endfor %}
+                                    </ul>
+                                    {% endif %}
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
+                    </li>
+                {% endfor %}
+                </ul>
+            {% endif %}
+        {% endif %}
+
+        <section class="body">
+            {{ page.content | safe }}
+        </section>
+
+        {% if page.taxonomies and page.taxonomies.tags %}
+            <div class="post-tags">
+                <nav class="nav tags">
+                    <ul class="tags">
+                        {% for tag in page.taxonomies.tags %}
+                            <li><a href={{ get_taxonomy_url(kind='tags', name=tag) | safe }}>{{ tag }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </nav>
+            </div>
+        {% endif %}
+
+    </article>
+</main>
+{% endmacro content %}

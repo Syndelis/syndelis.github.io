@@ -2,7 +2,7 @@
 base_url = "https://brenno.codes"
 
 # Whether to automatically compile all Sass files in the sass directory
-compile_sass = false
+compile_sass = true
 
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = false
@@ -34,11 +34,16 @@ menu = [
 
 
 socials = [
+  { name = "github", url = "https://github.com/syndelis", icon = "github" },
   { name = "mastodon", url = "https://fosstodon.org/@brenno", icon = "mastodon" },
-  { name = "github", url = "https://github.com/syndelis/", icon = "github" },
+  { name = "linkedin", url = "https://linkedin.com/in/brenno-dev", icon = "linkedin" },
+  { name = "email", url = "mailto:dev@brenno.codes", icon = "email" },
 ]
 
-stylesheets = []
+stylesheets = [
+  "main.css",
+  "cv.css"
+]
 
 mathjax = false
 mathjax_dollar_inline_enable = false
