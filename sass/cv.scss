@@ -12,6 +12,10 @@
   nav {
     display: none;
   }
+
+  :root {
+    @extend .light;
+  }
 }
 
 .name-sub-picture {
