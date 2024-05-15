@@ -51,3 +51,13 @@
   text-align: justify;
   text-justify: inter-word;
 }
+
+.print-button {
+  color: var( --text-0 );
+  border-color: var( --primary-color );
+  border-width: 3px;
+  border-radius: 15px;
+  background: none;
+  background-color: var( --);
+  cursor: pointer;
+}
