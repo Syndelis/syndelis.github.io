@@ -45,3 +45,15 @@ The job also involved requirements gathering with the Product Owner, development
 <p class="justify">
 Our team was challenged with decoupling some of the most critical components of the Monolithic system into new Microservices. That included handling user login across different products and replicating and synchronizing required data to ensure the product’s resilience.
 </p>
+
+# EDUCATION
+
+{{ education_entry(
+    title="Mater in Computer Science",
+    role="Federal University",
+    at="São João Del-Rei",
+    started="FEV 2022",
+    ended="MAR 2024",
+    score="93.35%")
+}}
+
