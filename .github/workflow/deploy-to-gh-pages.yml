@@ -11,6 +11,7 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
+        submodules: recursive
 
       - name: Build and deploy
         uses: shalzz/zola-deploy-action@v0.18.0
