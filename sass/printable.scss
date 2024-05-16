@@ -50,10 +50,14 @@
     font-size: 12pt;
   }
 
-  p, li {
+  p:not(.remain-mono), li {
     font-size: 11pt;
     font-family: sans-serif;
     font-weight: 300;
+  }
+
+  a {
+    font-family: 'Jetbrains Mono';
   }
 
   .print-button {
