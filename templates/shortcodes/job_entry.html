@@ -4,9 +4,13 @@
 </span>
 
 <div class="job-entry-date-role">
-    <span class="job-entry-role">{{ started }} — {{ ended }}</span>
+    {% for time_window in time_windows %}
+    <span class="job-entry-role">{{ time_window }}</span>
+    {% endfor %}
     <span>
         <div>{{ role }}</div>
+        {% if at %}
         <div><span class="primary-color">@</span> {{ at }}</div>
+        {% endif %}
     </span>
 </div>
