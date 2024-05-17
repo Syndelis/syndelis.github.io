@@ -27,7 +27,7 @@ comment = false
 
 menu = [
   { name = "/posts", url = "/posts", weight = 1 },
-  { name = "/about", url = "/about", weight = 2 },
+  { name = "/resume", url = "/resume", weight = 2 },
   { name = "/tags", url = "/tags", weight = 3 },
 ]
 

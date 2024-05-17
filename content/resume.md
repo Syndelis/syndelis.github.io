@@ -1,7 +1,7 @@
 +++
 title = "Brenno Lemos"
-path = "about"
-template = "about.html"
+path = "resume"
+template = "resume.html"
 
 [extra]
 sub = "Master of Computer Science, Software Engineer & Linux Nerd 🐧"
@@ -47,7 +47,7 @@ Our team was challenged with decoupling some of the most critical components of 
 # EDUCATION
 
 {{ education_entry(
-    title="Mater of Computer Science",
+    title="Master of Computer Science",
     role="Federal University",
     at="São João Del-Rei",
     started="FEB 2022",
@@ -105,7 +105,7 @@ During my graduation, I collaborated with a professor in the development of a so
 
 The [software for Cellular Automatas] is a Qt desktop application made with C, Pyhton and Cython. The project was funded by [FAPEMIG].
 
-During my pursuit of a Mater's degree, we've once again partnered to develop a [similar software][ode-designer-rs] that allows researchers to create and simulate ODEs, written entirely in Rust. The software ships with an ImGui-based interface featuring a node editor. It's capable of generating Python code to simulate equations, is localized in English and Portuguese and is extensible via Python code. Saving and loading data has been handled with Serde.
+During my pursuit of a Master's degree, we've once again partnered to develop a [similar software][ode-designer-rs] that allows researchers to create and simulate ODEs, written entirely in Rust. The software ships with an ImGui-based interface featuring a node editor. It's capable of generating Python code to simulate equations, is localized in English and Portuguese and is extensible via Python code. Saving and loading data has been handled with Serde.
 
 [software for Cellular Automatas]: https://github.com/Syndelis/ac-designer
 

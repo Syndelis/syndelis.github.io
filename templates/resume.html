@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+{% import "macros/resume.html" as resume %}
+
+{% block main_content %}
+    {{ resume::content(page=page) }}
+{% endblock main_content %}
