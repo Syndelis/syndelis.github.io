@@ -19,6 +19,10 @@ profile_picture = "../img/me.jpg"
 
 <p class="justify">
 At Arionkoder, I was outstaffed to iSeatz, a software company in the loyalty program business. I was invited to continue the development of a new Rust microservice, using the Axum framework, as well as SQLx for compile-time checked queries and Insta for unit testing.
+
+During this work, I was tasked with implementing the hotel line of business integration in this Rust microservice. This integration required fetching, inserting and updating supplier data into our SQLite (later migrated to Postgres) database, as well as making external endpoint calls to get availability data. Finally, this data had to be transformed into a standardized format for our Frontend team to consume. In many occasions, this required caching relevant pieces of data in between endpoint calls as to keep the request times at a minimum.
+
+I was also tasked with migrating our application's whole database schema from SQLite to Postgres. As we don't use an ORM, this meant I needed to change all non-standard-SQL concepts we were using in SQLite (maingly JSON/JSONB and Full Text Search) into the equivalents of Postgres, while introducing the correct indexes to ensure no significant performance hits were being introduced.
 </p>
 
 {{ job_entry(
